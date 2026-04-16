@@ -1,0 +1,251 @@
+[
+  {
+    "id": "quote-1",
+    "customerId": "cust-1",
+    "quoteNumber": "Q-2026-0001",
+    "status": "draft",
+    "lineItems": [
+      {
+        "id": "li-q1-1",
+        "description": "CNC-routed aluminum panels (anodized)",
+        "quantity": 20,
+        "unitPrice": 85,
+        "lineTotal": 1700
+      }
+    ],
+    "subtotal": 1700,
+    "tax": 136,
+    "total": 1836,
+    "validUntil": "2026-05-15T23:59:59.000Z",
+    "notes": "Awaiting engineering sign-off before send.",
+    "convertedToOrderId": null,
+    "createdAt": "2026-02-01T09:00:00.000Z",
+    "updatedAt": "2026-02-02T14:30:00.000Z"
+  },
+  {
+    "id": "quote-2",
+    "customerId": "cust-2",
+    "quoteNumber": "Q-2026-0002",
+    "status": "sent",
+    "lineItems": [
+      {
+        "id": "li-q2-1",
+        "description": "Steel bracket blanks — waterjet",
+        "quantity": 100,
+        "unitPrice": 5,
+        "lineTotal": 500
+      },
+      {
+        "id": "li-q2-2",
+        "description": "Deburr & tumble finish",
+        "quantity": 100,
+        "unitPrice": 3,
+        "lineTotal": 300
+      }
+    ],
+    "subtotal": 800,
+    "tax": 64,
+    "total": 864,
+    "validUntil": "2026-04-20T23:59:59.000Z",
+    "notes": null,
+    "convertedToOrderId": null,
+    "createdAt": "2026-02-03T11:15:00.000Z",
+    "updatedAt": "2026-02-05T10:00:00.000Z"
+  },
+  {
+    "id": "quote-3",
+    "customerId": "cust-3",
+    "quoteNumber": "Q-2026-0003",
+    "status": "accepted",
+    "lineItems": [
+      {
+        "id": "li-q3-1",
+        "description": "Powder coating batch — RAL 7016",
+        "quantity": 1,
+        "unitPrice": 2500,
+        "lineTotal": 2500
+      },
+      {
+        "id": "li-q3-2",
+        "description": "Masking & plug labor",
+        "quantity": 8,
+        "unitPrice": 75,
+        "lineTotal": 600
+      }
+    ],
+    "subtotal": 3100,
+    "tax": 248,
+    "total": 3348,
+    "validUntil": "2026-06-01T23:59:59.000Z",
+    "notes": "Rush slot reserved for week of March 10.",
+    "convertedToOrderId": null,
+    "createdAt": "2026-02-06T08:45:00.000Z",
+    "updatedAt": "2026-02-10T16:20:00.000Z"
+  },
+  {
+    "id": "quote-4",
+    "customerId": "cust-4",
+    "quoteNumber": "Q-2026-0004",
+    "status": "rejected",
+    "lineItems": [
+      {
+        "id": "li-q4-1",
+        "description": "Prototype heat sinks — extrusion + machining",
+        "quantity": 100,
+        "unitPrice": 3.5,
+        "lineTotal": 350
+      }
+    ],
+    "subtotal": 350,
+    "tax": 28,
+    "total": 378,
+    "validUntil": "2026-03-01T23:59:59.000Z",
+    "notes": "Customer chose overseas vendor on price.",
+    "convertedToOrderId": null,
+    "createdAt": "2026-02-08T13:00:00.000Z",
+    "updatedAt": "2026-02-12T09:00:00.000Z"
+  },
+  {
+    "id": "quote-5",
+    "customerId": "cust-5",
+    "quoteNumber": "Q-2026-0005",
+    "status": "expired",
+    "lineItems": [
+      {
+        "id": "li-q5-1",
+        "description": "Corrugated shipping cartons (custom die)",
+        "quantity": 15,
+        "unitPrice": 120,
+        "lineTotal": 1800
+      }
+    ],
+    "subtotal": 1800,
+    "tax": 144,
+    "total": 1944,
+    "validUntil": "2026-02-01T23:59:59.000Z",
+    "notes": "No response after two follow-ups.",
+    "convertedToOrderId": null,
+    "createdAt": "2026-01-20T10:00:00.000Z",
+    "updatedAt": "2026-02-02T17:00:00.000Z"
+  },
+  {
+    "id": "quote-6",
+    "customerId": "cust-6",
+    "quoteNumber": "Q-2026-0006",
+    "status": "draft",
+    "lineItems": [
+      {
+        "id": "li-q6-1",
+        "description": "Laser-cut stainless shims (0.5 mm)",
+        "quantity": 800,
+        "unitPrice": 0.75,
+        "lineTotal": 600
+      },
+      {
+        "id": "li-q6-2",
+        "description": "PE bag & label kit",
+        "quantity": 800,
+        "unitPrice": 0.35,
+        "lineTotal": 280
+      },
+      {
+        "id": "li-q6-3",
+        "description": "Flat-rate tooling amortization",
+        "quantity": 1,
+        "unitPrice": 450,
+        "lineTotal": 450
+      }
+    ],
+    "subtotal": 1330,
+    "tax": 106,
+    "total": 1436,
+    "validUntil": "2026-05-30T23:59:59.000Z",
+    "notes": null,
+    "convertedToOrderId": null,
+    "createdAt": "2026-02-11T15:30:00.000Z",
+    "updatedAt": "2026-02-11T15:30:00.000Z"
+  },
+  {
+    "id": "quote-7",
+    "customerId": "cust-7",
+    "quoteNumber": "Q-2026-0007",
+    "status": "sent",
+    "lineItems": [
+      {
+        "id": "li-q7-1",
+        "description": "Welded frame assemblies (MIG)",
+        "quantity": 12,
+        "unitPrice": 240,
+        "lineTotal": 2880
+      },
+      {
+        "id": "li-q7-2",
+        "description": "Weld cleanup & primer coat",
+        "quantity": 12,
+        "unitPrice": 65,
+        "lineTotal": 780
+      }
+    ],
+    "subtotal": 3660,
+    "tax": 293,
+    "total": 3953,
+    "validUntil": "2026-07-10T23:59:59.000Z",
+    "notes": "FOB our dock; freight quoted separately.",
+    "convertedToOrderId": null,
+    "createdAt": "2026-02-14T09:20:00.000Z",
+    "updatedAt": "2026-02-14T09:20:00.000Z"
+  },
+  {
+    "id": "quote-8",
+    "customerId": "cust-8",
+    "quoteNumber": "Q-2026-0008",
+    "status": "accepted",
+    "lineItems": [
+      {
+        "id": "li-q8-1",
+        "description": "Turned shaft blanks — 4140 PH",
+        "quantity": 3,
+        "unitPrice": 450,
+        "lineTotal": 1350
+      }
+    ],
+    "subtotal": 1350,
+    "tax": 108,
+    "total": 1458,
+    "validUntil": "2026-04-15T23:59:59.000Z",
+    "notes": "Material cert required on delivery.",
+    "convertedToOrderId": null,
+    "createdAt": "2026-02-16T12:00:00.000Z",
+    "updatedAt": "2026-02-18T11:45:00.000Z"
+  },
+  {
+    "id": "quote-9",
+    "customerId": "cust-9",
+    "quoteNumber": "Q-2026-0009",
+    "status": "draft",
+    "lineItems": [
+      {
+        "id": "li-q9-1",
+        "description": "Insulated wire harness — 12 AWG",
+        "quantity": 2,
+        "unitPrice": 320,
+        "lineTotal": 640
+      },
+      {
+        "id": "li-q9-2",
+        "description": "Connector kit (Molex compatible)",
+        "quantity": 6,
+        "unitPrice": 45,
+        "lineTotal": 270
+      }
+    ],
+    "subtotal": 910,
+    "tax": 73,
+    "total": 983,
+    "validUntil": "2026-06-20T23:59:59.000Z",
+    "notes": "Pending customer BOM revision.",
+    "convertedToOrderId": null,
+    "createdAt": "2026-02-19T08:00:00.000Z",
+    "updatedAt": "2026-02-19T08:00:00.000Z"
+  }
+]

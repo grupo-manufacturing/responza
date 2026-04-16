@@ -1,0 +1,362 @@
+[
+  {
+    "id": "msg-1",
+    "conversationId": "conv-1",
+    "direction": "outbound",
+    "body": "Thanks Sam, we can reserve your batch from Thursday.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-10T09:00:00.000Z",
+    "updatedAt": "2026-04-10T09:00:00.000Z"
+  },
+  {
+    "id": "msg-2",
+    "conversationId": "conv-1",
+    "direction": "inbound",
+    "body": "Perfect, please include touch-up cans in the same shipment.",
+    "status": "read",
+    "senderName": "Sam Lee",
+    "createdAt": "2026-04-11T10:35:00.000Z",
+    "updatedAt": "2026-04-11T10:35:00.000Z"
+  },
+  {
+    "id": "msg-3",
+    "conversationId": "conv-1",
+    "direction": "outbound",
+    "body": "Added 24 cans to the draft order for your review.",
+    "status": "delivered",
+    "senderName": null,
+    "createdAt": "2026-04-12T11:10:00.000Z",
+    "updatedAt": "2026-04-12T11:10:00.000Z"
+  },
+  {
+    "id": "msg-4",
+    "conversationId": "conv-1",
+    "direction": "inbound",
+    "body": "Could you confirm delivery by Friday afternoon?",
+    "status": "delivered",
+    "senderName": "Sam Lee",
+    "createdAt": "2026-04-13T09:20:00.000Z",
+    "updatedAt": "2026-04-13T09:20:00.000Z"
+  },
+  {
+    "id": "msg-5",
+    "conversationId": "conv-2",
+    "direction": "inbound",
+    "body": "Hi, do you ship smaller powder-finish runs to Denver?",
+    "status": "read",
+    "senderName": "Noah Kim",
+    "createdAt": "2026-04-09T08:50:00.000Z",
+    "updatedAt": "2026-04-09T08:50:00.000Z"
+  },
+  {
+    "id": "msg-6",
+    "conversationId": "conv-2",
+    "direction": "outbound",
+    "body": "Yes, we can handle runs under 100 units this month.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-10T09:30:00.000Z",
+    "updatedAt": "2026-04-10T09:30:00.000Z"
+  },
+  {
+    "id": "msg-7",
+    "conversationId": "conv-2",
+    "direction": "inbound",
+    "body": "Nice, do you have matte black and brushed silver options?",
+    "status": "read",
+    "senderName": "Noah Kim",
+    "createdAt": "2026-04-11T10:20:00.000Z",
+    "updatedAt": "2026-04-11T10:20:00.000Z"
+  },
+  {
+    "id": "msg-8",
+    "conversationId": "conv-2",
+    "direction": "outbound",
+    "body": "Great, please share your shipping pin code.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-12T16:10:00.000Z",
+    "updatedAt": "2026-04-12T16:10:00.000Z"
+  },
+  {
+    "id": "msg-9",
+    "conversationId": "conv-3",
+    "direction": "outbound",
+    "body": "Hello Elena, we still produce the galvanized bracket line.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-08T08:40:00.000Z",
+    "updatedAt": "2026-04-08T08:40:00.000Z"
+  },
+  {
+    "id": "msg-10",
+    "conversationId": "conv-3",
+    "direction": "inbound",
+    "body": "Good to hear, we need 200 units with rust-proof coating.",
+    "status": "delivered",
+    "senderName": "Elena Varga",
+    "createdAt": "2026-04-09T09:15:00.000Z",
+    "updatedAt": "2026-04-09T09:15:00.000Z"
+  },
+  {
+    "id": "msg-11",
+    "conversationId": "conv-3",
+    "direction": "outbound",
+    "body": "Noted. I can send quote tiers for 200 and 500 units.",
+    "status": "sent",
+    "senderName": null,
+    "createdAt": "2026-04-10T10:00:00.000Z",
+    "updatedAt": "2026-04-10T10:00:00.000Z"
+  },
+  {
+    "id": "msg-12",
+    "conversationId": "conv-3",
+    "direction": "inbound",
+    "body": "Please send pricing for 200 brackets and freight.",
+    "status": "delivered",
+    "senderName": "Elena Varga",
+    "createdAt": "2026-04-11T12:05:00.000Z",
+    "updatedAt": "2026-04-11T12:05:00.000Z"
+  },
+  {
+    "id": "msg-13",
+    "conversationId": "conv-4",
+    "direction": "inbound",
+    "body": "We need UV-resistant hardware kits for this season.",
+    "status": "read",
+    "senderName": "Imani Brooks",
+    "createdAt": "2026-04-07T14:10:00.000Z",
+    "updatedAt": "2026-04-07T14:10:00.000Z"
+  },
+  {
+    "id": "msg-14",
+    "conversationId": "conv-4",
+    "direction": "outbound",
+    "body": "We can support that. MOQ starts at 300 kits.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-08T15:00:00.000Z",
+    "updatedAt": "2026-04-08T15:00:00.000Z"
+  },
+  {
+    "id": "msg-15",
+    "conversationId": "conv-4",
+    "direction": "inbound",
+    "body": "Could we split delivery into two shipments next month?",
+    "status": "read",
+    "senderName": "Imani Brooks",
+    "createdAt": "2026-04-09T16:45:00.000Z",
+    "updatedAt": "2026-04-09T16:45:00.000Z"
+  },
+  {
+    "id": "msg-16",
+    "conversationId": "conv-4",
+    "direction": "outbound",
+    "body": "MOQ works for us, send the proforma invoice.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-10T18:30:00.000Z",
+    "updatedAt": "2026-04-10T18:30:00.000Z"
+  },
+  {
+    "id": "msg-17",
+    "conversationId": "conv-5",
+    "direction": "outbound",
+    "body": "Catalog sent. Lead time is currently 21 to 24 days.",
+    "status": "delivered",
+    "senderName": null,
+    "createdAt": "2026-04-06T10:05:00.000Z",
+    "updatedAt": "2026-04-06T10:05:00.000Z"
+  },
+  {
+    "id": "msg-18",
+    "conversationId": "conv-5",
+    "direction": "inbound",
+    "body": "Thanks, can you include brushed nickel and matte black?",
+    "status": "read",
+    "senderName": "Maria Santos",
+    "createdAt": "2026-04-07T11:30:00.000Z",
+    "updatedAt": "2026-04-07T11:30:00.000Z"
+  },
+  {
+    "id": "msg-19",
+    "conversationId": "conv-5",
+    "direction": "outbound",
+    "body": "Yes, both finishes are available in the 120-room quantity.",
+    "status": "sent",
+    "senderName": null,
+    "createdAt": "2026-04-08T13:20:00.000Z",
+    "updatedAt": "2026-04-08T13:20:00.000Z"
+  },
+  {
+    "id": "msg-20",
+    "conversationId": "conv-5",
+    "direction": "inbound",
+    "body": "Can your team install in phases over two weekends?",
+    "status": "delivered",
+    "senderName": "Maria Santos",
+    "createdAt": "2026-04-09T14:45:00.000Z",
+    "updatedAt": "2026-04-09T14:45:00.000Z"
+  },
+  {
+    "id": "msg-21",
+    "conversationId": "conv-6",
+    "direction": "inbound",
+    "body": "Can you laser etch logos on titanium bottle caps?",
+    "status": "read",
+    "senderName": "Jesse Fox",
+    "createdAt": "2026-04-05T09:25:00.000Z",
+    "updatedAt": "2026-04-05T09:25:00.000Z"
+  },
+  {
+    "id": "msg-22",
+    "conversationId": "conv-6",
+    "direction": "outbound",
+    "body": "Yes, minimum lot is 500 caps with vector artwork.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-06T10:10:00.000Z",
+    "updatedAt": "2026-04-06T10:10:00.000Z"
+  },
+  {
+    "id": "msg-23",
+    "conversationId": "conv-6",
+    "direction": "inbound",
+    "body": "We can send artwork today if samples ship this week.",
+    "status": "read",
+    "senderName": "Jesse Fox",
+    "createdAt": "2026-04-07T11:45:00.000Z",
+    "updatedAt": "2026-04-07T11:45:00.000Z"
+  },
+  {
+    "id": "msg-24",
+    "conversationId": "conv-6",
+    "direction": "outbound",
+    "body": "Thanks, etched sample looked perfect in our test run.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-08T11:25:00.000Z",
+    "updatedAt": "2026-04-08T11:25:00.000Z"
+  },
+  {
+    "id": "msg-25",
+    "conversationId": "conv-7",
+    "direction": "outbound",
+    "body": "Received drawing MT-4412. Checking stock right now.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-04T08:30:00.000Z",
+    "updatedAt": "2026-04-04T08:30:00.000Z"
+  },
+  {
+    "id": "msg-26",
+    "conversationId": "conv-7",
+    "direction": "inbound",
+    "body": "Please include ETA for 300 sets if partial ship allowed.",
+    "status": "read",
+    "senderName": "Quinn Harper",
+    "createdAt": "2026-04-05T09:40:00.000Z",
+    "updatedAt": "2026-04-05T09:40:00.000Z"
+  },
+  {
+    "id": "msg-27",
+    "conversationId": "conv-7",
+    "direction": "outbound",
+    "body": "We can dispatch first lot tomorrow, rest in three days.",
+    "status": "delivered",
+    "senderName": null,
+    "createdAt": "2026-04-06T10:25:00.000Z",
+    "updatedAt": "2026-04-06T10:25:00.000Z"
+  },
+  {
+    "id": "msg-28",
+    "conversationId": "conv-7",
+    "direction": "inbound",
+    "body": "Need availability update today before 5 PM.",
+    "status": "delivered",
+    "senderName": "Quinn Harper",
+    "createdAt": "2026-04-07T17:05:00.000Z",
+    "updatedAt": "2026-04-07T17:05:00.000Z"
+  },
+  {
+    "id": "msg-29",
+    "conversationId": "conv-8",
+    "direction": "inbound",
+    "body": "Can we schedule a showroom walkthrough next Tuesday?",
+    "status": "read",
+    "senderName": "Zoe Carter",
+    "createdAt": "2026-04-03T13:10:00.000Z",
+    "updatedAt": "2026-04-03T13:10:00.000Z"
+  },
+  {
+    "id": "msg-30",
+    "conversationId": "conv-8",
+    "direction": "outbound",
+    "body": "Absolutely. We have 11 AM and 3 PM slots open.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-04T12:20:00.000Z",
+    "updatedAt": "2026-04-04T12:20:00.000Z"
+  },
+  {
+    "id": "msg-31",
+    "conversationId": "conv-8",
+    "direction": "inbound",
+    "body": "11 AM works, please send parking and entry details.",
+    "status": "read",
+    "senderName": "Zoe Carter",
+    "createdAt": "2026-04-05T14:00:00.000Z",
+    "updatedAt": "2026-04-05T14:00:00.000Z"
+  },
+  {
+    "id": "msg-32",
+    "conversationId": "conv-8",
+    "direction": "outbound",
+    "body": "Tuesday visit confirmed, sharing showroom address now.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-06T15:35:00.000Z",
+    "updatedAt": "2026-04-06T15:35:00.000Z"
+  },
+  {
+    "id": "msg-33",
+    "conversationId": "conv-9",
+    "direction": "outbound",
+    "body": "We can color-match Pantone 186C on aluminum panels.",
+    "status": "read",
+    "senderName": null,
+    "createdAt": "2026-04-02T09:50:00.000Z",
+    "updatedAt": "2026-04-02T09:50:00.000Z"
+  },
+  {
+    "id": "msg-34",
+    "conversationId": "conv-9",
+    "direction": "inbound",
+    "body": "Great, our client wants approval sample before print run.",
+    "status": "delivered",
+    "senderName": "Skyler Ortiz",
+    "createdAt": "2026-04-03T11:15:00.000Z",
+    "updatedAt": "2026-04-03T11:15:00.000Z"
+  },
+  {
+    "id": "msg-35",
+    "conversationId": "conv-9",
+    "direction": "outbound",
+    "body": "Sample can go out tomorrow if artwork is final today.",
+    "status": "sent",
+    "senderName": null,
+    "createdAt": "2026-04-04T12:40:00.000Z",
+    "updatedAt": "2026-04-04T12:40:00.000Z"
+  },
+  {
+    "id": "msg-36",
+    "conversationId": "conv-9",
+    "direction": "inbound",
+    "body": "Can you hold quote till Monday while client approves?",
+    "status": "delivered",
+    "senderName": "Skyler Ortiz",
+    "createdAt": "2026-04-05T10:50:00.000Z",
+    "updatedAt": "2026-04-05T10:50:00.000Z"
+  }
+]

@@ -1,0 +1,148 @@
+[
+  {
+    "id": "order-1",
+    "customerId": "cust-1",
+    "quotationId": null,
+    "orderNumber": "SO-2026-0001",
+    "status": "pending",
+    "lineItems": [
+      {
+        "id": "li-o1-1",
+        "description": "Spare gasket kit — Viton",
+        "quantity": 10,
+        "unitPrice": 15,
+        "lineTotal": 150
+      }
+    ],
+    "subtotal": 150,
+    "tax": 12,
+    "total": 162,
+    "notes": "Stock pull from warehouse A.",
+    "createdAt": "2026-02-04T10:00:00.000Z",
+    "updatedAt": "2026-02-04T10:00:00.000Z"
+  },
+  {
+    "id": "order-2",
+    "customerId": "cust-3",
+    "quotationId": null,
+    "orderNumber": "SO-2026-0002",
+    "status": "confirmed",
+    "lineItems": [
+      {
+        "id": "li-o2-1",
+        "description": "Touch-up paint cans (matched batch)",
+        "quantity": 24,
+        "unitPrice": 18.5,
+        "lineTotal": 444
+      },
+      {
+        "id": "li-o2-2",
+        "description": "Spray gun rental (weekly)",
+        "quantity": 1,
+        "unitPrice": 120,
+        "lineTotal": 120
+      }
+    ],
+    "subtotal": 564,
+    "tax": 45,
+    "total": 609,
+    "notes": null,
+    "createdAt": "2026-02-07T14:20:00.000Z",
+    "updatedAt": "2026-02-09T09:15:00.000Z"
+  },
+  {
+    "id": "order-3",
+    "customerId": "cust-5",
+    "quotationId": null,
+    "orderNumber": "SO-2026-0003",
+    "status": "in_production",
+    "lineItems": [
+      {
+        "id": "li-o3-1",
+        "description": "Printed corrugated inserts (2-up)",
+        "quantity": 5000,
+        "unitPrice": 0.42,
+        "lineTotal": 2100
+      }
+    ],
+    "subtotal": 2100,
+    "tax": 168,
+    "total": 2268,
+    "notes": "Artwork approved 2026-02-08.",
+    "createdAt": "2026-02-08T07:30:00.000Z",
+    "updatedAt": "2026-02-11T16:00:00.000Z"
+  },
+  {
+    "id": "order-4",
+    "customerId": "cust-7",
+    "quotationId": null,
+    "orderNumber": "SO-2026-0004",
+    "status": "shipped",
+    "lineItems": [
+      {
+        "id": "li-o4-1",
+        "description": "Replacement conveyor roller (rubber lagged)",
+        "quantity": 6,
+        "unitPrice": 198,
+        "lineTotal": 1188
+      }
+    ],
+    "subtotal": 1188,
+    "tax": 95,
+    "total": 1283,
+    "notes": "Tracking: mock carrier 1Z999.",
+    "createdAt": "2026-02-01T12:00:00.000Z",
+    "updatedAt": "2026-02-13T08:45:00.000Z"
+  },
+  {
+    "id": "order-5",
+    "customerId": "cust-9",
+    "quotationId": null,
+    "orderNumber": "SO-2026-0005",
+    "status": "delivered",
+    "lineItems": [
+      {
+        "id": "li-o5-1",
+        "description": "Cable assembly — 2 m leads, ferrules installed",
+        "quantity": 50,
+        "unitPrice": 22,
+        "lineTotal": 1100
+      },
+      {
+        "id": "li-o5-2",
+        "description": "QC electrical continuity test",
+        "quantity": 50,
+        "unitPrice": 2.5,
+        "lineTotal": 125
+      }
+    ],
+    "subtotal": 1225,
+    "tax": 98,
+    "total": 1323,
+    "notes": "POD signed 2026-02-14.",
+    "createdAt": "2026-02-05T09:00:00.000Z",
+    "updatedAt": "2026-02-14T17:30:00.000Z"
+  },
+  {
+    "id": "order-6",
+    "customerId": "cust-10",
+    "quotationId": null,
+    "orderNumber": "SO-2026-0006",
+    "status": "pending",
+    "lineItems": [
+      {
+        "id": "li-o6-1",
+        "description": "Custom display base — acrylic + aluminum",
+        "quantity": 4,
+        "unitPrice": 175,
+        "lineTotal": 700
+      }
+    ],
+    "subtotal": 700,
+    "tax": 56,
+    "total": 756,
+    "notes": "Awaiting deposit before scheduling.",
+    "createdAt": "2026-02-17T11:00:00.000Z",
+    "updatedAt": "2026-02-17T11:00:00.000Z"
+  }
+]

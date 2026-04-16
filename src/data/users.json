@@ -1,0 +1,10 @@
+[
+  {
+    "id": "user-1",
+    "email": "demo@factoriz.local",
+    "name": "Demo User",
+    "role": "admin",
+    "createdAt": "2026-01-01T09:00:00.000Z",
+    "updatedAt": "2026-01-01T09:00:00.000Z"
+  }
+]

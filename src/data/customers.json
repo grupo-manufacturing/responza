@@ -1,0 +1,112 @@
+[
+  {
+    "id": "cust-1",
+    "companyName": "Acme Manufacturing",
+    "contactName": "Jordan Smith",
+    "email": "jordan@acme-mfg.example",
+    "phone": "+1-555-0100",
+    "address": "100 Industrial Way, Columbus, OH",
+    "notes": "Prefers net-30 terms.",
+    "createdAt": "2026-01-02T14:00:00.000Z",
+    "updatedAt": "2026-01-15T11:30:00.000Z"
+  },
+  {
+    "id": "cust-2",
+    "companyName": "Northwind Tools Ltd.",
+    "contactName": "Alex Rivera",
+    "email": "alex@northwind.example",
+    "phone": "+1-555-0201",
+    "address": "45 Harbor Rd, Seattle, WA",
+    "notes": null,
+    "createdAt": "2026-01-03T10:15:00.000Z",
+    "updatedAt": "2026-01-03T10:15:00.000Z"
+  },
+  {
+    "id": "cust-3",
+    "companyName": "Brightline Coating",
+    "contactName": "Sam Lee",
+    "email": "sam@brightline.example",
+    "phone": "+1-555-0199",
+    "address": null,
+    "notes": "Rush orders possible with surcharge.",
+    "createdAt": "2026-01-04T16:45:00.000Z",
+    "updatedAt": "2026-02-01T09:00:00.000Z"
+  },
+  {
+    "id": "cust-4",
+    "companyName": "Helios Solar Components",
+    "contactName": "Priya Nair",
+    "email": "priya@helios-solar.example",
+    "phone": null,
+    "address": "2200 Sunfield Dr, Austin, TX",
+    "notes": null,
+    "createdAt": "2026-01-08T08:20:00.000Z",
+    "updatedAt": "2026-01-08T08:20:00.000Z"
+  },
+  {
+    "id": "cust-5",
+    "companyName": "Redwood Packaging Co.",
+    "contactName": "Chris Morgan",
+    "email": "chris.morgan@redwood-pack.example",
+    "phone": "+1-555-0440",
+    "address": "18 Mill St, Portland, OR",
+    "notes": "Sustainability certifications on file.",
+    "createdAt": "2026-01-10T13:00:00.000Z",
+    "updatedAt": "2026-01-22T17:10:00.000Z"
+  },
+  {
+    "id": "cust-6",
+    "companyName": "Atlas Robotics",
+    "contactName": "Morgan Ellis",
+    "email": "morgan@atlas-robotics.example",
+    "phone": "+1-555-0606",
+    "address": null,
+    "notes": "NDA required before sharing drawings.",
+    "createdAt": "2026-01-12T11:45:00.000Z",
+    "updatedAt": "2026-01-12T11:45:00.000Z"
+  },
+  {
+    "id": "cust-7",
+    "companyName": "Lakeside Hospitality Group",
+    "contactName": "Taylor Brooks",
+    "email": "taylor@lakeside-hg.example",
+    "phone": "+1-555-0771",
+    "address": "9 Lakeview Ave, Chicago, IL",
+    "notes": null,
+    "createdAt": "2026-01-14T09:30:00.000Z",
+    "updatedAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "cust-8",
+    "companyName": "Granite City Forge",
+    "contactName": "Jamie O'Neill",
+    "email": "jamie@granite-forge.example",
+    "phone": null,
+    "address": "500 Foundry Ln, Pittsburgh, PA",
+    "notes": "Heavy freight; loading dock hours 7–3.",
+    "createdAt": "2026-01-18T15:20:00.000Z",
+    "updatedAt": "2026-01-18T15:20:00.000Z"
+  },
+  {
+    "id": "cust-9",
+    "companyName": "Meridian Medical Devices",
+    "contactName": "Dr. Renee Park",
+    "email": "rpark@meridian-med.example",
+    "phone": "+1-555-0990",
+    "address": "1 Innovation Blvd, Boston, MA",
+    "notes": "ISO 13485 audit scheduled Q2.",
+    "createdAt": "2026-01-20T10:00:00.000Z",
+    "updatedAt": "2026-02-10T14:25:00.000Z"
+  },
+  {
+    "id": "cust-10",
+    "companyName": "Cascade Outdoor Gear",
+    "contactName": "Riley Chen",
+    "email": "riley@cascade-gear.example",
+    "phone": "+1-555-1010",
+    "address": "77 Trailhead Rd, Bend, OR",
+    "notes": null,
+    "createdAt": "2026-01-22T12:10:00.000Z",
+    "updatedAt": "2026-01-22T12:10:00.000Z"
+  }
+]

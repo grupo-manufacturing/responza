@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand-primary: #0052ff;
+    --color-brand-hover: #578bfa;
+    --color-link-secondary: #0667d0;
+    --color-text-primary: #0a0b0d;
+    --color-text-inverse: #ffffff;
+    --color-surface-base: #ffffff;
+    --color-surface-secondary: #eef0f3;
+    --color-surface-dark: #0a0b0d;
+    --color-surface-dark-card: #282b31;
+    --color-surface-light-tint: rgba(247, 247, 247, 0.88);
+    --color-border-muted: rgba(91, 97, 110, 0.2);
+  }
+
+  html {
+    @apply bg-surface-base text-text-primary;
+  }
+
+  body {
+    @apply m-0 bg-surface-base font-text text-[15px] leading-[1.47] text-text-primary antialiased;
+  }
+
+  #root {
+    @apply min-h-dvh bg-surface-base;
+  }
+
+  :where(a, button):focus-visible {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+  }
+
+  :where(input, select, textarea):focus-visible {
+    outline: none !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+  }
+
+  :where(input, select, textarea):focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  :where(button, [role='button'], a, input, select, textarea) {
+    touch-action: manipulation;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbars while keeping overflow scroll (mouse wheel / touch / keyboard). */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .section-light {
+    @apply bg-surface-base text-text-primary;
+  }
+
+  .section-dark {
+    @apply bg-surface-dark text-text-inverse;
+  }
+
+  .radius-pill {
+    border-radius: 56px;
+  }
+
+  .radius-full-pill {
+    border-radius: 100000px;
+  }
+
+  .type-hero-1 {
+    @apply font-display text-[80px] font-normal leading-[1];
+  }
+
+  .type-hero-2 {
+    @apply font-display text-[64px] font-normal leading-[1];
+  }
+
+  .type-hero-3 {
+    @apply font-display text-[52px] font-normal leading-[1];
+  }
+
+  .type-section {
+    @apply font-sans text-[36px] font-normal leading-[1.11];
+  }
+
+  .type-card-title {
+    @apply font-sans text-[32px] font-normal leading-[1.13];
+  }
+
+  .type-feature {
+    @apply font-sans text-[16px] font-semibold leading-[1.35];
+  }
+
+  .type-body {
+    @apply font-text text-[15px] font-normal leading-[1.47];
+  }
+
+  .type-body-small {
+    @apply font-text text-[14px] font-normal leading-[1.43];
+  }
+
+  .type-button {
+    @apply font-sans text-[14px] font-semibold leading-[1.2] tracking-[0.12px];
+  }
+
+  .type-caption {
+    @apply font-sans text-[12px] font-semibold leading-[1.42];
+  }
+
+  .type-small {
+    @apply font-sans text-[11px] font-semibold leading-[1.27];
+  }
+}

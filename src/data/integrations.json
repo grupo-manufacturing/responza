@@ -1,0 +1,12 @@
+{
+  "whatsapp": {
+    "connected": false,
+    "accountName": null,
+    "connectedAt": null
+  },
+  "instagram": {
+    "connected": false,
+    "accountName": null,
+    "connectedAt": null
+  }
+}
