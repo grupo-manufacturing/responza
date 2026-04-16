@@ -1,5 +1,6 @@
 import type { ID, Timestamps } from '@/types/common.types'
 import type { LineItem } from '@/types/quotation.types'
+export type { LineItem } from '@/types/quotation.types'
 
 export type OrderStatus =
   | 'pending'
