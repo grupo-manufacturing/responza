@@ -467,25 +467,15 @@ export function TermsConditionsPage(): ReactElement {
           {/* Section 16 */}
           <div>
             <h2 className="text-xl font-semibold text-slate-900">16. Dispute Resolution</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-6">
-              <li>
-                The parties will first attempt to resolve any dispute through good-faith
-                negotiation within 30 days of written notice.
-              </li>
-              <li>
-                Unresolved disputes will be submitted to mediation before initiating formal
-                proceedings.
-              </li>
-              <li>
-                If mediation fails, disputes will be resolved by binding arbitration under the
-                Arbitration and Conciliation Act, 1996 (India), with proceedings in Bengaluru,
-                Karnataka, India.
-              </li>
-              <li>
-                Either party may seek urgent injunctive relief from a competent court to prevent
-                irreparable harm.
-              </li>
-            </ul>
+            <p>
+              Users may bring any disputes to the Company who will try to resolve them amicably.
+            </p>
+            <p>
+              While User's right to take legal action shall always remain unaffected, in the event of any controversy regarding the use of Responza or the Service, Users are asked to contact the Company at the contact details provided in this document.
+            </p>
+            <p>
+              The user may submit the complaint including a brief description and if applicable , the details of the related order , purchase , or account to the Company's email address specified in this document.
+            </p>
           </div>
 
           {/* Section 17 */}
@@ -495,7 +485,7 @@ export function TermsConditionsPage(): ReactElement {
             </h2>
             <p className="mt-3">
               These Terms are governed by the laws of India. Subject to the arbitration clause,
-              you submit to the exclusive jurisdiction of the courts of Bengaluru, Karnataka,
+              you submit to the exclusive jurisdiction of the courts of Hyderabad, Telangana,
               India.
             </p>
           </div>
@@ -542,16 +532,7 @@ export function TermsConditionsPage(): ReactElement {
                 href="mailto:legal@responza.in"
                 className="text-link-secondary hover:underline"
               >
-                legal@responza.in
-              </a>
-            </p>
-            <p className="mt-1">
-              Support:{' '}
-              <a
-                href="mailto:support@responza.in"
-                className="text-link-secondary hover:underline"
-              >
-                support@responza.in
+                contact@grupo.in
               </a>
             </p>
             <p className="mt-1">

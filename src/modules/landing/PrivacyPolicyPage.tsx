@@ -19,21 +19,18 @@ export function PrivacyPolicyPage(): ReactElement {
           <h1 className="mt-4 font-display text-4xl font-normal tracking-tight md:text-5xl">
             Privacy Policy
           </h1>
-          <p className="mt-3 text-sm text-slate-500">
-            Effective Date: April 16, 2026 &nbsp;·&nbsp; Last Updated: April 2026
-          </p>
 
           <section className="mt-10 space-y-8 text-slate-700">
           <p>
             Responza ("Responza", "we", "our", or "us") is a unified AI-powered messaging and
-            customer intelligence platform operated by Grupo.in. Responza enables businesses
+            customer intelligence platform operated by Grupo Technologies Private Limited. Responza enables businesses
             ("Business Users") operating on WhatsApp, Instagram, IndiaMart, TikTok, and other
             digital commerce channels to manage customer conversations, gain AI-driven insights,
-            translate messages, and automate customer support — all from one platform.
+            translate messages, and automate customer support all from one platform.
           </p>
           <p>
             This Privacy Policy explains how we collect, use, store, and share information when
-            you use Responza — both as a Business User and in relation to data about your end
+            you use Responza both as a Business User and in relation to data about your end
             customers ("End Customers") whose messages you receive through our platform.
           </p>
           <p>By registering for or using Responza, you agree to this Privacy Policy.</p>
@@ -115,7 +112,7 @@ export function PrivacyPolicyPage(): ReactElement {
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-6">
               <li>
-                Message content (text only — we do not access voice messages, images, or documents
+                Message content (text only we do not access voice messages, images, or documents
                 unless you explicitly enable those integrations in future features)
               </li>
               <li>
@@ -497,7 +494,7 @@ export function PrivacyPolicyPage(): ReactElement {
                 href="mailto:privacy@responza.in"
                 className="text-link-secondary hover:underline"
               >
-                privacy@responza.in
+                contact@grupo.in
               </a>
             </p>
             <p className="mt-1">
