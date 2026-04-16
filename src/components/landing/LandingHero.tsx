@@ -28,10 +28,6 @@ export function LandingHero(): ReactElement {
 
       {/* Left: Text */}
       <div className="relative z-10 flex flex-col">
-        <p className="mb-7 inline-flex w-fit items-center gap-2 rounded-full border border-border-muted bg-surface-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-link-secondary">
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-primary" />
-          CRM for Modern Manufacturers
-        </p>
 
         <h1 className="mb-6 font-display text-5xl font-normal leading-[1.05] tracking-tight text-text-primary lg:text-6xl xl:text-7xl">
           Close more deals,{' '}
