@@ -6,8 +6,6 @@ import { LandingUnifiedInbox } from '@/components/landing/LandingUnifiedInbox'
 import { LandingTranslations } from '@/components/landing/LandingTranslations'
 import { LandingInsights }    from '@/components/landing/LandingInsights'
 import { LandingFeatures }    from '@/components/landing/LandingFeatures'
-import { LandingHowItWorks }  from '@/components/landing/LandingHowItWorks'
-// import { LandingPricing }     from '@/components/landing/LandingPricing'
 import { LandingFAQ }         from '@/components/landing/LandingFAQ'
 import { LandingFooterCTA }   from '@/components/landing/LandingFooterCTA'
 
@@ -20,8 +18,6 @@ export function LandingPage(): ReactElement {
       <LandingTranslations />
       <LandingInsights />
       <LandingFeatures />
-      <LandingHowItWorks />
-      {/* <LandingPricing /> */}
       <LandingFAQ />
       <LandingFooterCTA />
     </div>

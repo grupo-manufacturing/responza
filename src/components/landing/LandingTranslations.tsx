@@ -93,9 +93,14 @@ export function LandingTranslations(): ReactElement {
   return (
     <section className="landing-translations">
       <Container>
+        <div className="landing-translations-intro">
+          <Eyebrow>AI translation</Eyebrow>
+          <p className="landing-translations-copy landing-translations-copy-full">
+            Translation is applied to assist communication. You review messages before sending.
+          </p>
+        </div>
         <div className="landing-translations-grid">
           <div>
-            <Eyebrow>AI translation</Eyebrow>
             <h2 className="display landing-translations-title">
               Reply in the language your customer types in.
             </h2>

@@ -13,8 +13,8 @@ export function LandingFooterCTA(): ReactElement {
       <Container className="landing-footer-cta-inner">
         <Eyebrow color="rgba(255,255,255,0.7)">Early access · Q2 2026</Eyebrow>
         <h2 className="display landing-footer-cta-title">
-          Let the AI reply.<br />
-          <span className="landing-footer-cta-accent">You go close the sale.</span>
+          Unified Messaging Platform.<br />
+          <span className="landing-footer-cta-accent">Close the deals quickly.</span>
         </h2>
         <p className="landing-footer-cta-copy">
           Join 1,200+ Indian merchants on the waitlist. First 200 conversations are free — forever.

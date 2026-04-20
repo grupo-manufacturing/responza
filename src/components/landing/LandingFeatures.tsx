@@ -3,12 +3,10 @@ import { Container, SectionHead } from '@/components/landing/primitives'
 
 const FEATURES = [
   { title: 'Unified inbox',               body: 'One timeline per customer across Shopify, Instagram, WhatsApp and IndiaMART. Never ask \'which channel was this on?\' again.' },
-  { title: 'AI reply drafts',             body: 'Drafts written in your tone, informed by your catalog, past orders and policies. You approve; AI sends.' },
   { title: 'Auto-translate, 11 languages', body: 'Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Punjabi, Kannada, Malayalam, Odia, English. Arabic coming soon.' },
   { title: 'Built-in CRM',                body: 'Customer 360°: lifetime value, preferred channel, language, city, tags. Segment and broadcast without a spreadsheet.' },
-  { title: 'Weekly AI briefing',          body: 'Every Monday, a short note on what\'s trending, who\'s at risk, and where to focus. In plain English, delivered to WhatsApp.' },
-  { title: 'Team routing & SLAs',         body: 'Assign by language, product, or VIP status. SLA timers and escalation rules for the conversations that matter.' },
-  { title: 'Bulk & broadcast',            body: 'Send a WhatsApp template to 5,000 customers at once — segmented by city, language, or past purchases.' },
+  { title: 'Weekly briefings',          body: 'Every Monday, a short note on what\'s trending, who\'s at risk, and where to focus. In plain English, delivered to WhatsApp.' },
+  { title: 'Bulk & broadcast',            body: 'Send a WhatsApp template to 5,000 customers at once' },
   { title: 'Works with your stack',       body: 'Razorpay, Shiprocket, Delhivery, Judge.me. One-click. Custom webhooks for everything else.' },
 ]
 
@@ -20,7 +18,7 @@ export function LandingFeatures(): ReactElement {
           eyebrow="Features"
           title={
             <>
-              A CRM that actually <em className="landing-accent-em">replies.</em>
+              A Unified CRM that actually <em className="landing-accent-em">replies.</em>
             </>
           }
         />
