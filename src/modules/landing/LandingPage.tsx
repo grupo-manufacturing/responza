@@ -1,22 +1,29 @@
 import type { ReactElement } from 'react'
-import { LandingCta } from '@/components/landing/LandingCta'
-import { LandingFeatures } from '@/components/landing/LandingFeatures'
-import { LandingFooter } from '@/components/landing/LandingFooter'
-import { LandingHero } from '@/components/landing/LandingHero'
-import { LandingNavbar } from '@/components/landing/LandingNavbar'
-import { LandingTestimonials } from '@/components/landing/LandingTestimonials'
+import '@/landing.css'
+import { LandingNavbar }      from '@/components/landing/LandingNavbar'
+import { LandingHero }        from '@/components/landing/LandingHero'
+import { LandingUnifiedInbox } from '@/components/landing/LandingUnifiedInbox'
+import { LandingTranslations } from '@/components/landing/LandingTranslations'
+import { LandingInsights }    from '@/components/landing/LandingInsights'
+import { LandingFeatures }    from '@/components/landing/LandingFeatures'
+import { LandingHowItWorks }  from '@/components/landing/LandingHowItWorks'
+// import { LandingPricing }     from '@/components/landing/LandingPricing'
+import { LandingFAQ }         from '@/components/landing/LandingFAQ'
+import { LandingFooterCTA }   from '@/components/landing/LandingFooterCTA'
 
 export function LandingPage(): ReactElement {
   return (
-    <main className="relative min-h-dvh overflow-hidden bg-surface-base text-text-primary">
-      <section className="relative mx-auto w-full max-w-6xl px-6 py-6 md:px-10 md:py-8">
-        <LandingNavbar />
-        <LandingHero />
-      </section>
+    <div className="landing-page">
+      <LandingNavbar />
+      <LandingHero />
+      <LandingUnifiedInbox />
+      <LandingTranslations />
+      <LandingInsights />
       <LandingFeatures />
-      <LandingTestimonials />
-      <LandingCta />
-      <LandingFooter />
-    </main>
+      <LandingHowItWorks />
+      {/* <LandingPricing /> */}
+      <LandingFAQ />
+      <LandingFooterCTA />
+    </div>
   )
 }

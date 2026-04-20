@@ -1,12 +1,13 @@
 import type { ReactElement } from 'react'
 import { Link } from 'react-router-dom'
+import '@/landing.css'
 
-import { LandingFooter } from '@/components/landing/LandingFooter'
+import { LandingFooterCTA } from '@/components/landing/LandingFooterCTA'
 import { LandingNavbar } from '@/components/landing/LandingNavbar'
 
 export function PrivacyPolicyPage(): ReactElement {
   return (
-    <main className="relative min-h-dvh bg-surface-base text-text-primary">
+    <main className="landing-page relative min-h-dvh bg-surface-base text-text-primary">
       <section className="mx-auto w-full max-w-6xl px-6 py-6 md:px-10 md:py-8">
         <LandingNavbar />
       </section>
@@ -514,7 +515,7 @@ export function PrivacyPolicyPage(): ReactElement {
         </div>
       </section>
 
-      <LandingFooter />
+      <LandingFooterCTA />
     </main>
   )
 }
