@@ -53,8 +53,8 @@ export function LandingHero(): ReactElement {
       <div style={{ maxWidth: 1240, margin: '0 auto', padding: '0 28px', position: 'relative' }}>
         <div>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '6px 12px 6px 6px', border: '1px solid var(--line)', borderRadius: 999, background: 'var(--card)', marginBottom: 28 }}>
-            <span style={{ background: 'var(--accent)', color: '#fff', fontSize: 10.5, fontWeight: 700, padding: '4px 8px', borderRadius: 999, letterSpacing: '0.08em' }}>NEW</span>
-            <span className="mono" style={{ fontSize: 12, color: 'var(--ink-2)' }}>Replies in 11 Indian languages</span>
+            <span style={{ background: 'var(--accent)', color: '#fff', fontSize: 10.5, fontWeight: 700, padding: '4px 8px', borderRadius: 999, letterSpacing: '0.08em' }}>INDIA'S</span>
+            <span className="mono" style={{ fontSize: 12, color: 'var(--ink-2)' }}>#1 Smart Inbox For Businesses</span>
           </div>
 
           <h1 className="display" style={{ fontSize: 'clamp(44px, 5.4vw, 84px)', lineHeight: 0.95, letterSpacing: '-0.025em', margin: '0 0 22px', color: 'var(--ink)' }}>

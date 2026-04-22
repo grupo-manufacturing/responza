@@ -9,11 +9,6 @@ export function LandingNavbar(): ReactElement {
         <Link to="/" className="landing-navbar-logo">
           <Wordmark size={18} />
         </Link>
-        <div className="landing-navbar-cta">
-          <Link to="/login" className="landing-btn landing-btn-sm landing-btn-primary">
-            Sign in
-          </Link>
-        </div>
       </div>
     </nav>
   )
