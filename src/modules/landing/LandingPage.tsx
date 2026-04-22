@@ -5,6 +5,7 @@ import { LandingHero }        from '@/components/landing/LandingHero'
 import { LandingUnifiedInbox } from '@/components/landing/LandingUnifiedInbox'
 import { LandingTranslations } from '@/components/landing/LandingTranslations'
 import { LandingInsights }    from '@/components/landing/LandingInsights'
+import { LandingIntegrations } from '@/components/landing/LandingIntegrations'
 import { LandingFeatures }    from '@/components/landing/LandingFeatures'
 import { LandingFAQ }         from '@/components/landing/LandingFAQ'
 import { LandingFooterCTA }   from '@/components/landing/LandingFooterCTA'
@@ -14,6 +15,7 @@ export function LandingPage(): ReactElement {
     <div className="landing-page">
       <LandingNavbar />
       <LandingHero />
+      <LandingIntegrations />
       <LandingUnifiedInbox />
       <LandingTranslations />
       <LandingInsights />

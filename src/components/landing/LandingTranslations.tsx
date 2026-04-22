@@ -96,7 +96,7 @@ export function LandingTranslations(): ReactElement {
         <div className="landing-translations-intro">
           <Eyebrow>AI translation</Eyebrow>
           <p className="landing-translations-copy landing-translations-copy-full">
-            Translation is applied to assist communication. You review messages before sending.
+            Responza detects the language, translates the inbound message, in the chosen one automatically. 11 Indian Languages + English , Arabic & more.
           </p>
         </div>
         <div className="landing-translations-grid">

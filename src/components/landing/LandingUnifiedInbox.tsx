@@ -41,6 +41,10 @@ export function LandingUnifiedInbox(): ReactElement {
           title={<>Every conversation, <em className="landing-accent-em">one</em> place.</>}
         />
 
+        <p className="landing-unified-lead">
+          Instagram DMs, WhatsApp Chats & IndiaMART B2B enquiries. Threaded by customer, not by channel.
+        </p>
+
         <div className="landing-unified-shell">
           {/* toolbar */}
           <div className="landing-unified-toolbar">

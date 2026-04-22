@@ -92,7 +92,7 @@ export function LandingInsights(): ReactElement {
     <section className="landing-insights">
       <Container>
         <SectionHead
-          eyebrow="AI insights"
+          eyebrow="Weekly insights"
           title="Numbers your gut feel couldn't see."
         />
         <div className="landing-insights-shell">

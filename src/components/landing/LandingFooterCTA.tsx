@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Eyebrow, Btn, Wordmark } from '@/components/landing/primitives'
+import { Container, Btn, Wordmark } from '@/components/landing/primitives'
 
 export function LandingFooterCTA(): ReactElement {
   const [email, setEmail] = useState('')
@@ -11,7 +11,6 @@ export function LandingFooterCTA(): ReactElement {
     <section className="landing-footer-cta">
       <div aria-hidden className="landing-footer-cta-glow" />
       <Container className="landing-footer-cta-inner">
-        <Eyebrow color="rgba(255,255,255,0.7)">Early access · Q2 2026</Eyebrow>
         <h2 className="display landing-footer-cta-title">
           Unified Messaging Platform.<br />
           <span className="landing-footer-cta-accent">Close the deals quickly.</span>
