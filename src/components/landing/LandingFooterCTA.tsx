@@ -1,11 +1,14 @@
 import type { ReactElement } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { submitWaitlistEmail } from '@/lib/waitlistSubmit'
 import { Container, Btn, Wordmark } from '@/components/landing/primitives'
 
 export function LandingFooterCTA(): ReactElement {
   const [email, setEmail] = useState('')
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   return (
     <section className="landing-footer-cta">
@@ -20,18 +23,44 @@ export function LandingFooterCTA(): ReactElement {
         </p>
 
         <form
-          onSubmit={(e) => { e.preventDefault(); setSent(true) }}
+          onSubmit={async (e) => {
+            e.preventDefault()
+            if (sending || sent) return
+            setError(null)
+            setSending(true)
+            try {
+              await submitWaitlistEmail(email, 'footer')
+              setSent(true)
+            } catch (err) {
+              setError(err instanceof Error ? err.message : 'Something went wrong.')
+            } finally {
+              setSending(false)
+            }
+          }}
           className="landing-footer-cta-form"
         >
           <input
             required type="email" placeholder="you@yourstore.in" value={email}
             onChange={(e) => setEmail(e.target.value)}
+            disabled={sent}
             className="landing-footer-cta-input"
+            aria-invalid={error ? true : undefined}
+            aria-describedby={error ? 'footer-early-access-error' : undefined}
           />
-          <Btn variant="accent" size="md" as="button" type="submit">
-            {sent ? 'On the list ✓' : 'Get early access'}
+          <Btn variant="accent" size="md" as="button" type="submit" disabled={sending || sent}>
+            {sent ? 'On the list ✓' : sending ? 'Sending…' : 'Get early access'}
           </Btn>
         </form>
+        {error ? (
+          <p
+            id="footer-early-access-error"
+            role="alert"
+            className="mono"
+            style={{ color: 'rgba(255,255,255,0.85)', marginTop: 14, marginBottom: 0, fontSize: 13 }}
+          >
+            {error}
+          </p>
+        ) : null}
 
         {/* minimal footer */}
         <div className="landing-footer-cta-bottom">

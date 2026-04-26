@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react'
 import { useState } from 'react'
+import { submitWaitlistEmail } from '@/lib/waitlistSubmit'
 import { Btn } from './primitives'
 
 function renderHeadline(text: string) {
@@ -39,6 +40,8 @@ export function LandingHero(): ReactElement {
   const subhead = "Responza unifies Shopify, Instagram, WhatsApp and IndiaMART in a single CRM — and replies in your customer's language while you sleep."
   const [email, setEmail] = useState('')
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   return (
     <section style={{ position: 'relative', paddingTop: 72, paddingBottom: 96 }}>
@@ -69,7 +72,20 @@ export function LandingHero(): ReactElement {
             <form
               id="hero-early-access"
               className="landing-hero-form"
-              onSubmit={(e) => { e.preventDefault(); setSent(true) }}
+              onSubmit={async (e) => {
+                e.preventDefault()
+                if (sending || sent) return
+                setError(null)
+                setSending(true)
+                try {
+                  await submitWaitlistEmail(email, 'hero')
+                  setSent(true)
+                } catch (err) {
+                  setError(err instanceof Error ? err.message : 'Something went wrong.')
+                } finally {
+                  setSending(false)
+                }
+              }}
             >
               <input
                 required
@@ -79,12 +95,25 @@ export function LandingHero(): ReactElement {
                 placeholder="you@yourstore.in"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                disabled={sent}
                 className="landing-hero-input"
+                aria-invalid={error ? true : undefined}
+                aria-describedby={error ? 'hero-early-access-error' : undefined}
               />
-              <Btn variant="accent" size="md" as="button" type="submit">
-                {sent ? "You're on the list ✓" : 'Get early access'}
+              <Btn variant="accent" size="md" as="button" type="submit" disabled={sending || sent}>
+                {sent ? "You're on the list ✓" : sending ? 'Sending…' : 'Get early access'}
               </Btn>
             </form>
+            {error ? (
+              <p
+                id="hero-early-access-error"
+                role="alert"
+                className="mono"
+                style={{ fontSize: 13, color: 'var(--danger, #b91c1c)', marginTop: 12, marginBottom: 0 }}
+              >
+                {error}
+              </p>
+            ) : null}
 
             <div className="landing-hero-trust-badges" aria-label="Product assurances">
               {HERO_TRUST_BADGES.map((label) => (

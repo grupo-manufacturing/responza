@@ -17,6 +17,7 @@
   "dependencies": {
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
+    "resend": "^3.2.0",
     "@react-pdf/renderer": "^4.4.1",
     "date-fns": "^4.1.0",
     "lucide-react": "^1.8.0",
