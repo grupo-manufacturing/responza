@@ -1,6 +1,7 @@
+/// <reference types="node" />
 import 'dotenv/config'
-import type { IncomingMessage, ServerResponse } from 'node:http'
-import { runWaitlist } from './waitlistResendService'
+import type { IncomingMessage, ServerResponse } from 'http'
+import { runWaitlist } from './waitlistResendService.js'
 
 type NextFn = (err?: unknown) => void
 

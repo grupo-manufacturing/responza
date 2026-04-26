@@ -1,5 +1,6 @@
-import type { IncomingMessage, ServerResponse } from 'node:http'
-import { runWaitlist } from '../lib/waitlistResendService'
+/// <reference types="node" />
+import type { IncomingMessage, ServerResponse } from 'http'
+import { runWaitlist } from '../lib/waitlistResendService.js'
 
 /**
  * Vercel Node.js function: POST /api/waitlist
