@@ -1,5 +1,5 @@
 import type { Plugin } from 'vite'
-import { waitlistConnectMiddleware } from './api/waitlist.mjs'
+import { waitlistConnectMiddleware } from './api/waitlist.ts'
 
 const middleware = waitlistConnectMiddleware()
 

@@ -1,21 +1,24 @@
 import 'dotenv/config'
+import type { IncomingMessage, ServerResponse } from 'node:http'
 import { Resend } from 'resend'
 
-function isValidEmail(s) {
+type NextFn = (err?: unknown) => void
+
+function isValidEmail(s: unknown): s is string {
   if (typeof s !== 'string') return false
   const t = s.trim()
   if (t.length > 320) return false
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)
 }
 
-function readJsonBody(req) {
+function readJsonBody(req: IncomingMessage): Promise<Record<string, unknown>> {
   return new Promise((resolve, reject) => {
-    const body = []
-    req.on('data', (c) => body.push(c))
+    const body: Buffer[] = []
+    req.on('data', (c: Buffer) => body.push(c))
     req.on('end', () => {
       try {
         const s = Buffer.concat(body).toString('utf8')
-        resolve(s ? JSON.parse(s) : {})
+        resolve(s ? (JSON.parse(s) as Record<string, unknown>) : {})
       } catch (e) {
         reject(e)
       }
@@ -142,59 +145,73 @@ https://responza.in`
  * Sends a thank-you email to the address the visitor entered.
  */
 export function waitlistConnectMiddleware() {
-  return async (req, res, next) => {
+  return (req: IncomingMessage, res: ServerResponse, next: NextFn) => {
     const path = (req.url ?? '').split('?')[0] ?? ''
     if (path !== '/api/waitlist' || req.method !== 'POST') {
       return next()
     }
 
-    res.setHeader('Content-Type', 'application/json; charset=utf-8')
+    void (async () => {
+      res.setHeader('Content-Type', 'application/json; charset=utf-8')
 
-    let body
-    try {
-      body = await readJsonBody(req)
-    } catch {
-      res.statusCode = 400
-      return res.end(JSON.stringify({ error: 'Invalid request body.' }))
-    }
-
-    const email = body?.email
-    if (!isValidEmail(email)) {
-      res.statusCode = 400
-      return res.end(JSON.stringify({ error: 'Please enter a valid email address.' }))
-    }
-
-    const key = process.env.RESEND_API_KEY
-    const from = process.env.RESEND_FROM_EMAIL
-    if (!key || !from) {
-      res.statusCode = 503
-      return res.end(JSON.stringify({ error: 'Sign-up is not configured yet.' }))
-    }
-
-    const to = email.trim()
-    const resend = new Resend(key)
-
-    try {
-      const { error } = await resend.emails.send({
-        from,
-        to: [to],
-        subject: "You're in — Responza early access",
-        html: confirmationHtml,
-        text: confirmationText,
-      })
-
-      if (error) {
-        console.error('resend error:', error)
-        res.statusCode = 502
-        return res.end(JSON.stringify({ error: 'Could not send email. Try again later.' }))
+      let body: Record<string, unknown>
+      try {
+        body = await readJsonBody(req)
+      } catch {
+        res.statusCode = 400
+        res.end(JSON.stringify({ error: 'Invalid request body.' }))
+        return
       }
 
-      res.statusCode = 200
-      return res.end(JSON.stringify({ ok: true }))
-    } catch (e) {
-      console.error('waitlist error:', e)
-      res.statusCode = 502
-      return res.end(JSON.stringify({ error: 'Could not complete sign-up. Try again later.' }))
-    }
+      const email = body.email
+      if (!isValidEmail(email)) {
+        res.statusCode = 400
+        res.end(JSON.stringify({ error: 'Please enter a valid email address.' }))
+        return
+      }
+
+      const key = process.env.RESEND_API_KEY
+      const from = process.env.RESEND_FROM_EMAIL
+      if (!key || !from) {
+        res.statusCode = 503
+        res.end(JSON.stringify({ error: 'Sign-up is not configured yet.' }))
+        return
+      }
+
+      const to = email.trim()
+      const resend = new Resend(key)
+
+      try {
+        const { error } = await resend.emails.send({
+          from,
+          to: [to],
+          subject: "You're in — Responza early access",
+          html: confirmationHtml,
+          text: confirmationText,
+        })
+
+        if (error) {
+          console.error('resend error:', error)
+          res.statusCode = 502
+          res.end(JSON.stringify({ error: 'Could not send email. Try again later.' }))
+          return
+        }
+
+        res.statusCode = 200
+        res.end(JSON.stringify({ ok: true }))
+      } catch (e) {
+        console.error('waitlist error:', e)
+        res.statusCode = 502
+        res.end(JSON.stringify({ error: 'Could not complete sign-up. Try again later.' }))
+      }
+    })().catch((e) => {
+      console.error('waitlist unhandled error:', e)
+      if (!res.headersSent) {
+        res.statusCode = 500
+        res.end(JSON.stringify({ error: 'Server error.' }))
+        return
+      }
+      res.destroy()
+    })
   }
 }
