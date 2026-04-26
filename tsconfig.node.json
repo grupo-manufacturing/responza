@@ -8,10 +8,6 @@
     "skipLibCheck": true,
 
     "strict": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
 
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
