@@ -1,4 +1,5 @@
 /// <reference types="node" />
+import { readFile } from 'node:fs/promises'
 import { Resend } from 'resend'
 
 export type WaitlistFailure = {
@@ -14,6 +15,20 @@ function isValidEmail(s: unknown): s is string {
   const t = s.trim()
   if (t.length > 320) return false
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)
+}
+
+let logoDataUriPromise: Promise<string | null> | null = null
+
+async function getLogoDataUri(): Promise<string | null> {
+  if (!logoDataUriPromise) {
+    logoDataUriPromise = readFile(new URL('../src/assets/logo.png', import.meta.url))
+      .then((buffer) => `data:image/png;base64,${buffer.toString('base64')}`)
+      .catch((error) => {
+        console.warn('waitlist logo unavailable:', error)
+        return null
+      })
+  }
+  return logoDataUriPromise
 }
 
 /** Table-based layout + inline CSS for broad email client support. */
@@ -35,9 +50,10 @@ const confirmationHtml = `<!DOCTYPE html>
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                 <tr>
                   <td style="padding:36px 32px 32px;">
+                    <div style="margin:0 0 16px;">{{logo}}</div>
                     <p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.75);">Early access</p>
                     <p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.03em;line-height:1.15;color:#ffffff;">You&rsquo;re on the list</p>
-                    <p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.55;color:rgba(255,255,255,0.92);">Welcome to Responza &mdash; India&rsquo;s #1 smart inbox for businesses.</p>
+                    <p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.55;color:rgba(255,255,255,0.92);">Welcome to Responza AI &mdash; India&rsquo;s #1 smart inbox for businesses.</p>
                   </td>
                 </tr>
               </table>
@@ -56,8 +72,8 @@ const confirmationHtml = `<!DOCTYPE html>
                       </tr>
                     </table>
                     <h1 style="margin:20px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0f0e0c;">Congratulations</h1>
-                    <p style="margin:14px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.65;color:#2b2723;">Thank you for joining our <strong style="color:#0f0e0c;">early access waitlist</strong>. We&rsquo;re building the unified inbox your team deserves &mdash; Shopify, Instagram, WhatsApp, IndiaMART, and more in one place.</p>
-                    <p style="margin:18px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.65;color:#5c5349;">We&rsquo;ll email you with product news and launch details. No spam &mdash; only what matters.</p>
+                    <p style="margin:14px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.65;color:#2b2723;">Thank you for joining our <strong style="color:#0f0e0c;">early access waitlist</strong>. We&rsquo;re building the unified inbox your team deserves &mdash; Instagram, WhatsApp, IndiaMART, and more in one place.</p>
+                    <p style="margin:18px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.65;color:#5c5349;">50% discount is waiting for you when we launch.</p>
                   </td>
                 </tr>
                 <tr>
@@ -103,7 +119,7 @@ const confirmationHtml = `<!DOCTYPE html>
           </tr>
         </table>
         <p style="margin:24px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:11px;color:#9a8f82;text-align:center;max-width:480px;">
-          &copy; 2026 Responza. Sent because you signed up for early access on our website.
+          &copy; 2026 Responza AI. Sent because you signed up for early access on our website.
         </p>
       </td>
     </tr>
@@ -118,7 +134,9 @@ Congratulations, and thank you for joining the Responza waitlist.
 
 We're building India's #1 smart inbox for businesses: one place for
 Shopify, Instagram, WhatsApp, IndiaMART, and more. You'll hear from us
-with product news and launch details—no spam.
+with product news and launch details.
+
+50% discount is waiting for you when we launch.
 
 — Unified: every channel, one thread
 — Smart: built for growing Indian businesses  
@@ -147,6 +165,11 @@ export async function runWaitlist(body: unknown): Promise<WaitlistResult> {
   }
 
   const to = email.trim()
+  const logoDataUri = await getLogoDataUri()
+  const logoMarkup = logoDataUri
+    ? `<img src="${logoDataUri}" alt="Responza" width="170" style="display:block;height:auto;max-width:170px;border:0;outline:none;text-decoration:none;">`
+    : `<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:18px;font-weight:800;letter-spacing:0.08em;color:#ffffff;">RESPONZA</p>`
+  const html = confirmationHtml.replace('{{logo}}', logoMarkup)
   const resend = new Resend(key)
 
   try {
@@ -154,7 +177,7 @@ export async function runWaitlist(body: unknown): Promise<WaitlistResult> {
       from,
       to: [to],
       subject: "You're in — Responza early access",
-      html: confirmationHtml,
+      html,
       text: confirmationText,
     })
     if (error) {
