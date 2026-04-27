@@ -17,18 +17,40 @@ function isValidEmail(s: unknown): s is string {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)
 }
 
-let logoDataUriPromise: Promise<string | null> | null = null
+type WaitlistLogo = {
+  contentBase64: string
+  filename: string
+  mimeType: string
+}
 
-async function getLogoDataUri(): Promise<string | null> {
-  if (!logoDataUriPromise) {
-    logoDataUriPromise = readFile(new URL('../src/assets/logo.png', import.meta.url))
-      .then((buffer) => `data:image/png;base64,${buffer.toString('base64')}`)
-      .catch((error) => {
-        console.warn('waitlist logo unavailable:', error)
-        return null
-      })
+let logoPromise: Promise<WaitlistLogo | null> | null = null
+
+async function getLogoAsset(): Promise<WaitlistLogo | null> {
+  if (!logoPromise) {
+    logoPromise = (async () => {
+      try {
+        const jpgBuffer = await readFile(new URL('../src/assets/logo.jpg', import.meta.url))
+        return {
+          contentBase64: jpgBuffer.toString('base64'),
+          filename: 'logo.jpg',
+          mimeType: 'image/jpeg',
+        }
+      } catch {
+        try {
+          const pngBuffer = await readFile(new URL('../src/assets/logo.png', import.meta.url))
+          return {
+            contentBase64: pngBuffer.toString('base64'),
+            filename: 'logo.png',
+            mimeType: 'image/png',
+          }
+        } catch (error) {
+          console.warn('waitlist logo unavailable:', error)
+          return null
+        }
+      }
+    })()
   }
-  return logoDataUriPromise
+  return logoPromise
 }
 
 /** Table-based layout + inline CSS for broad email client support. */
@@ -111,7 +133,7 @@ const confirmationHtml = `<!DOCTYPE html>
                 <tr>
                   <td style="padding:20px 32px 28px;border-radius:0 0 20px 20px;background-color:#fbf9f6;border:1px solid #e5e0d6;border-top:none;">
                     <p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:0.04em;color:#0f0e0c;">RESPONZA</p>
-                    <p style="margin:6px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:12px;color:#7a6f62;">The smart inbox for modern commerce teams.</p>
+                    <p style="margin:6px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:12px;color:#7a6f62;">Unified Messaging Platform For Businesses</p>
                   </td>
                 </tr>
               </table>
@@ -165,11 +187,19 @@ export async function runWaitlist(body: unknown): Promise<WaitlistResult> {
   }
 
   const to = email.trim()
-  const logoDataUri = await getLogoDataUri()
-  const logoMarkup = logoDataUri
-    ? `<img src="${logoDataUri}" alt="Responza" width="170" style="display:block;height:auto;max-width:170px;border:0;outline:none;text-decoration:none;">`
+  const logoAsset = await getLogoAsset()
+  const logoMarkup = logoAsset
+    ? '<img src="cid:responza-logo" alt="Responza" width="80" style="display:block;height:auto;max-width:80px;border:0;outline:none;text-decoration:none;">'
     : `<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:18px;font-weight:800;letter-spacing:0.08em;color:#ffffff;">RESPONZA</p>`
   const html = confirmationHtml.replace('{{logo}}', logoMarkup)
+  const inlineLogoAttachment = logoAsset
+    ? ({
+        filename: logoAsset.filename,
+        content: logoAsset.contentBase64,
+        content_type: logoAsset.mimeType,
+        content_id: 'responza-logo',
+      } as unknown as { filename: string; content: string })
+    : undefined
   const resend = new Resend(key)
 
   try {
@@ -179,6 +209,7 @@ export async function runWaitlist(body: unknown): Promise<WaitlistResult> {
       subject: "You're in — Responza early access",
       html,
       text: confirmationText,
+      attachments: inlineLogoAttachment ? [inlineLogoAttachment] : undefined,
     })
     if (error) {
       console.error('resend error:', error)
