@@ -11,9 +11,22 @@ function renderHeadline(text: string) {
   return (
     <>
       {head}{' '}
-      <span style={{ position: 'relative', whiteSpace: 'nowrap' }}>
-        <span style={{ position: 'relative', zIndex: 1 }}>{tail}</span>
-        <span aria-hidden style={{ position: 'absolute', left: 0, right: 0, bottom: '0.04em', height: '0.32em', background: 'var(--accent)', opacity: 0.35, zIndex: 0, borderRadius: 3 }} />
+      <span className="landing-hero-highlight-wrap">
+        <span className="landing-hero-highlight-text">{tail}</span>
+        <span
+          aria-hidden
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            bottom: '0.04em',
+            height: '0.32em',
+            background: 'var(--accent)',
+            opacity: 0.35,
+            zIndex: 0,
+            borderRadius: 3,
+          }}
+        />
       </span>
     </>
   )
@@ -44,23 +57,19 @@ export function LandingHero(): ReactElement {
   const [error, setError] = useState<string | null>(null)
 
   return (
-    <section style={{ position: 'relative', paddingTop: 72, paddingBottom: 96 }}>
-      <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-        <div style={{
-          position: 'absolute', top: -200, right: -200, width: 720, height: 720, borderRadius: '50%',
-          background: 'radial-gradient(closest-side, color-mix(in oklab, var(--accent) 28%, transparent), transparent 70%)',
-          filter: 'blur(4px)',
-        }} />
+    <section className="landing-hero">
+      <div aria-hidden className="landing-hero-glow-wrap">
+        <div className="landing-hero-glow" />
       </div>
 
-      <div style={{ maxWidth: 1240, margin: '0 auto', padding: '0 28px', position: 'relative' }}>
-        <div>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '6px 12px 6px 6px', border: '1px solid var(--line)', borderRadius: 999, background: 'var(--card)', marginBottom: 28 }}>
-            <span style={{ background: 'var(--accent)', color: '#fff', fontSize: 10.5, fontWeight: 700, padding: '4px 8px', borderRadius: 999, letterSpacing: '0.08em' }}>INDIA'S</span>
-            <span className="mono" style={{ fontSize: 12, color: 'var(--ink-2)' }}>#1 Smart Inbox For Businesses</span>
+      <div className="landing-container landing-hero-inner">
+        <div className="landing-hero-content">
+          <div className="landing-hero-pill">
+            <span className="landing-hero-pill-new">INDIA'S</span>
+            <span className="mono landing-hero-pill-text">#1 Smart Inbox For Businesses</span>
           </div>
 
-          <h1 className="display" style={{ fontSize: 'clamp(44px, 5.4vw, 84px)', lineHeight: 0.95, letterSpacing: '-0.025em', margin: '0 0 22px', color: 'var(--ink)' }}>
+          <h1 className="display landing-hero-title">
             {renderHeadline(headline)}
           </h1>
 

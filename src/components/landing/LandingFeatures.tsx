@@ -24,10 +24,7 @@ export function LandingFeatures(): ReactElement {
         />
         <div className="landing-features-grid">
           {FEATURES.map((f, i) => (
-            <div
-              key={f.title}
-              className={`landing-features-item ${(i + 1) % 4 === 0 ? 'landing-features-item-end' : ''} ${i < 4 ? 'landing-features-item-top' : ''}`}
-            >
+            <div key={f.title} className="landing-features-item">
               <div className="mono landing-features-index">
                 0{i + 1}
               </div>
