@@ -1,6 +1,5 @@
 import type { ReactElement } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-
 import { AuthProvider } from '@/context/AuthContext'
 import { CommunicationsProvider } from '@/context/CommunicationsContext'
 import { LeadsProvider } from '@/context/LeadsContext'

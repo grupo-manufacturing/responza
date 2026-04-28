@@ -15,16 +15,17 @@
     "whatsapp:send-test": "node server/send-whatsapp-test.js"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^4.4.1",
+    "@vercel/analytics": "2.0.1",
     "@types/node": "^24.12.2",
+    "date-fns": "^4.1.0",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
-    "resend": "^3.2.0",
-    "@react-pdf/renderer": "^4.4.1",
-    "date-fns": "^4.1.0",
     "lucide-react": "^1.8.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.14.0",
+    "resend": "^3.2.0",
     "uuid": "^13.0.0"
   },
   "devDependencies": {
