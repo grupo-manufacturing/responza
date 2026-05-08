@@ -16,9 +16,12 @@ export function LandingIntegrations(): ReactElement {
       <Container>
         <div className="landing-integrations-head">
           <Eyebrow>Integrations</Eyebrow>
-          <h2 className="display landing-integrations-title">
-            Your channels, <em className="landing-accent-em">one</em> stack.
+          <h2 className="landing-integrations-title">
+            Connect your sales channels in one inbox.
           </h2>
+          <p className="landing-integrations-kicker">
+            Use WhatsApp, Instagram and IndiaMART from a single workspace built for Indian teams.
+          </p>
         </div>
 
         <div className="landing-integrations-logos" role="list" aria-label="Channel integrations">

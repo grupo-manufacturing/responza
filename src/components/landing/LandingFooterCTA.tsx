@@ -14,13 +14,10 @@ export function LandingFooterCTA(): ReactElement {
     <section className="landing-footer-cta">
       <div aria-hidden className="landing-footer-cta-glow" />
       <Container className="landing-footer-cta-inner">
-        <h2 className="display landing-footer-cta-title">
+        <h2 className="landing-footer-cta-title">
           Unified Messaging Platform.<br />
           <span className="landing-footer-cta-accent">Close the deals quickly.</span>
         </h2>
-        <p className="landing-footer-cta-copy">
-          Join 1,200+ Indian merchants on the waitlist. First 200 conversations are free — forever.
-        </p>
 
         <form
           onSubmit={async (e) => {

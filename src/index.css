@@ -29,6 +29,10 @@
     @apply min-h-dvh bg-surface-base;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   :where(a, button):focus-visible {
     outline: 2px solid var(--color-brand-primary);
     outline-offset: 2px;

@@ -2,12 +2,42 @@ import type { ReactElement } from 'react'
 import { Container, SectionHead } from '@/components/landing/primitives'
 
 const FEATURES = [
-  { title: 'Unified inbox',               body: 'One timeline per customer across Shopify, Instagram, WhatsApp and IndiaMART. Never ask \'which channel was this on?\' again.' },
-  { title: 'Auto-translate, 11 languages', body: 'Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Punjabi, Kannada, Malayalam, Odia, English. Arabic coming soon.' },
-  { title: 'Built-in CRM',                body: 'Customer 360°: lifetime value, preferred channel, language, city, tags. Segment and broadcast without a spreadsheet.' },
-  { title: 'Weekly briefings',          body: 'Every Monday, a short note on what\'s trending, who\'s at risk, and where to focus. In plain English, delivered to WhatsApp.' },
-  { title: 'Bulk & broadcast',            body: 'Send a WhatsApp template to 5,000 customers at once' },
-  { title: 'Works with your stack',       body: 'Razorpay, Shiprocket, Delhivery, Judge.me. One-click. Custom webhooks for everything else.' },
+  {
+    title: 'Unified inbox',
+    body: 'All messages from WhatsApp, Instagram DMs, and IndiaMART enquiries in one dashboard, including Instagram basic DM automation.',
+  },
+  {
+    title: '24/7 AI replies',
+    body: 'AI handles price enquiries, stock availability, and order status in the customer\'s language and tone, trained on your business context.',
+  },
+  {
+    title: 'Lead priority tagging',
+    body: 'Every message is auto-tagged as Hot Lead, Warm, Just Browsing, or Spam so your team knows exactly who to call first.',
+  },
+  {
+    title: 'India language translation',
+    body: 'Auto-detect and translate Hindi, Tamil, Telugu, Marathi, Bengali, and Gujarati. Reply in their language or yours.',
+  },
+  {
+    title: 'AI-suggested templates',
+    body: 'Get context-aware suggested replies and send in one tap, so your team stops typing the same answers all day.',
+  },
+  {
+    title: 'Auto-built contact profiles',
+    body: 'Each contact gets a live profile with conversation history, source channel, past orders, tags, and notes in one place.',
+  },
+  {
+    title: 'Conversation insights',
+    body: 'AI surfaces insights like repeated bulk-pricing requests or complaint patterns, so you know what your inbox is really saying.',
+  },
+  {
+    title: 'Performance analytics',
+    body: 'Track average response time, channel-wise conversion, busiest hours, and bot vs human reply ratio to spot leaks fast.',
+  },
+  {
+    title: 'Everyday follow-ups automated',
+    body: 'Automate routine customer texts and repetitive follow-ups while your team focuses on high-intent conversations.',
+  },
 ]
 
 export function LandingFeatures(): ReactElement {
@@ -18,9 +48,10 @@ export function LandingFeatures(): ReactElement {
           eyebrow="Features"
           title={
             <>
-              A Unified CRM that actually <em className="landing-accent-em">replies.</em>
+              Features built for fast-moving <em className="landing-accent-em">MSME teams.</em>
             </>
           }
+          kicker="From first enquiry to repeat order, the platform helps your team respond faster, prioritize better, and sell more."
         />
         <div className="landing-features-grid">
           {FEATURES.map((f, i) => (

@@ -91,7 +91,7 @@ function TranslationMachine(): ReactElement {
 
 export function LandingTranslations(): ReactElement {
   return (
-    <section className="landing-translations">
+    <section id="translations" className="landing-translations">
       <Container>
         <div className="landing-translations-intro">
           <Eyebrow>AI translation</Eyebrow>
@@ -101,7 +101,7 @@ export function LandingTranslations(): ReactElement {
         </div>
         <div className="landing-translations-grid">
           <div>
-            <h2 className="display landing-translations-title">
+            <h2 className="landing-translations-title">
               Reply in the language your customer types in.
             </h2>
             <div className="landing-translations-language-grid">

@@ -4,8 +4,8 @@ import { LandingNavbar }      from '@/components/landing/LandingNavbar'
 import { LandingHero }        from '@/components/landing/LandingHero'
 import { LandingUnifiedInbox } from '@/components/landing/LandingUnifiedInbox'
 import { LandingTranslations } from '@/components/landing/LandingTranslations'
-import { LandingInsights }    from '@/components/landing/LandingInsights'
 import { LandingIntegrations } from '@/components/landing/LandingIntegrations'
+import { LandingHowItWorks } from '@/components/landing/LandingHowItWorks'
 import { LandingFeatures }    from '@/components/landing/LandingFeatures'
 import { LandingFAQ }         from '@/components/landing/LandingFAQ'
 import { LandingFooterCTA }   from '@/components/landing/LandingFooterCTA'
@@ -16,9 +16,9 @@ export function LandingPage(): ReactElement {
       <LandingNavbar />
       <LandingHero />
       <LandingIntegrations />
+      <LandingHowItWorks />
       <LandingUnifiedInbox />
       <LandingTranslations />
-      <LandingInsights />
       <LandingFeatures />
       <LandingFAQ />
       <LandingFooterCTA />
