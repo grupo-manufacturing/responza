@@ -52,12 +52,6 @@ export function PrivacyPolicyPage(): ReactElement {
                   Service or parts of our Service.
                 </li>
                 <li>
-                  <strong>Affiliate</strong> means an entity that controls, is controlled by, or is
-                  under common control with a party, where &quot;control&quot; means ownership of 50%
-                  or more of the shares, equity interest, or other securities entitled to vote for
-                  election of directors or other managing authority.
-                </li>
-                <li>
                   <strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;,
                   &quot;Us&quot;, or &quot;Our&quot; in this Agreement) refers to Grupo Technologies
                   Private Limited, the operator of Responza.
@@ -98,9 +92,7 @@ export function PrivacyPolicyPage(): ReactElement {
                   to assist the Company in analyzing how the Service is used.
                 </li>
                 <li>
-                  <strong>Third-party Social Media Service</strong> refers to any website or social
-                  network through which a User can log in or connect an account to use the Service,
-                  including Facebook and Instagram (Meta Platforms).
+                  <strong>Third-party Social Media Service</strong> refers to any website or any social network website through which a User can log in or create an account to use the Service.
                 </li>
                 <li>
                   <strong>Usage Data</strong> refers to data collected automatically, either generated
@@ -176,8 +168,12 @@ export function PrivacyPolicyPage(): ReactElement {
                 following Third-party Social Media Services:
               </p>
               <ul className="mt-2 list-disc space-y-1 pl-6">
+                <li>Google</li> 
                 <li>Facebook (Meta)</li>
                 <li>Instagram (Meta)</li>
+                <li>X</li>
+                <li>WhatsApp</li>
+                <li>LinkedIn</li>
               </ul>
               <p className="mt-2">
                 If You decide to register through or otherwise grant Us access to a Third-Party
@@ -250,20 +246,18 @@ export function PrivacyPolicyPage(): ReactElement {
               <p className="mt-2">We use both Session and Persistent Cookies for the purposes set out below:</p>
               <ul className="mt-2 list-disc space-y-2 pl-6">
                 <li>
-                  <strong>Necessary / Essential Cookies</strong> — Type: Session Cookies — Administered
-                  by: Us — Purpose: These Cookies are essential to provide You with services available
+                  <strong>Necessary / Essential Cookies</strong> Type: Session Cookies
+                  by Us — Purpose: These Cookies are essential to provide You with services available
                   through the Website and to enable You to use some of its features, including
                   authentication and preventing fraudulent use of user accounts.
                 </li>
                 <li>
-                  <strong>Cookies Policy / Notice Acceptance Cookies</strong> — Type: Persistent
-                  Cookies — Administered by: Us — Purpose: These Cookies identify if users have
+                  <strong>Cookies Policy / Notice Acceptance Cookies</strong> Type: Persistent
+                  Cookies by Us — Purpose: These Cookies identify if users have
                   accepted the use of cookies on the Website.
                 </li>
                 <li>
-                  <strong>Functionality Cookies</strong> — Type: Persistent Cookies — Administered by:
-                  Us — Purpose: These Cookies allow us to remember choices You make when You use the
-                  Website, such as remembering your login details or language preference.
+                  <strong>Functionality Cookies</strong> Type: Persistent Cookies by Us — Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference.
                 </li>
               </ul>
             </div>
@@ -349,10 +343,10 @@ export function PrivacyPolicyPage(): ReactElement {
 
             <div>
               <h2 className="text-xl font-semibold text-slate-900">
-                Meta Platform Data — Facebook and Instagram
+                Meta Platform Data — Facebook , Instagram , & WhatsApp
               </h2>
               <p className="mt-3">
-                Responza integrates with Meta platforms (Facebook and Instagram) through Meta&apos;s
+                Responza integrates with Meta platforms (Facebook , Instagram & WhatsApp) through Meta&apos;s
                 official APIs. The following additional provisions apply:
               </p>
               <ul className="mt-3 list-disc space-y-2 pl-6">
@@ -556,11 +550,6 @@ export function PrivacyPolicyPage(): ReactElement {
                 posting the new Privacy Policy on this page.
               </p>
               <p className="mt-2">
-                We will let You know via email and/or a prominent notice on Our Service, prior to the
-                change becoming effective and update the &quot;Last updated&quot; date at the top of this Privacy
-                Policy.
-              </p>
-              <p className="mt-2">
                 You are advised to review this Privacy Policy periodically for any changes. Changes to
                 this Privacy Policy are effective when they are posted on this page.
               </p>
@@ -593,9 +582,6 @@ export function PrivacyPolicyPage(): ReactElement {
                   </a>
                 </li>
               </ul>
-              <p className="mt-3">
-                Data Protection Officer — Grupo Technologies Private Limited (Responza)
-              </p>
             </div>
           </section>
         </div>
