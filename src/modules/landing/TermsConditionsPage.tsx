@@ -20,7 +20,7 @@ export function TermsConditionsPage(): ReactElement {
           <h1 className="mt-4 font-display text-4xl font-normal tracking-tight md:text-5xl">
             Terms &amp; Conditions
           </h1>
-          <p className="mt-3 text-sm text-slate-500">Effective Date: April 16, 2026</p>
+          <p className="mt-3 text-sm text-slate-500">Effective Date: May 22, 2026</p>
 
           <section className="mt-10 space-y-8 text-slate-700">
           <p>
@@ -41,7 +41,7 @@ export function TermsConditionsPage(): ReactElement {
             <p className="mt-3">
               Responza is a unified AI-powered messaging and customer intelligence platform that
               connects to your business accounts on WhatsApp (via Meta's Business API), Instagram
-              (via Meta's Graph API), IndiaMart, and TikTok. Responza provides:
+              (via Meta's Graph API), and IndiaMart. Responza provides:
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-6">
               <li>A unified inbox aggregating messages from all connected channels</li>
@@ -159,18 +159,10 @@ export function TermsConditionsPage(): ReactElement {
               is not affiliated with IndiaMart and cannot guarantee API availability or continuity.
             </p>
 
-            <h3 className="mt-4 font-semibold">3.4 TikTok</h3>
-            <p className="mt-2">
-              TikTok integration is available for TikTok Business accounts with messaging API
-              access. You must comply with TikTok's Business API Terms of Service. Responza's
-              TikTok integration availability is subject to TikTok's API policies and regional
-              restrictions.
-            </p>
-
-            <h3 className="mt-4 font-semibold">3.5 Channel Availability</h3>
+            <h3 className="mt-4 font-semibold">3.4 Channel Availability</h3>
             <p className="mt-2">
               Responza does not guarantee uninterrupted access to any third-party channel. If
-              Meta, IndiaMart, or TikTok changes or restricts their API terms, Responza may need
+              Meta or IndiaMart changes or restricts their API terms, Responza may need
               to modify, suspend, or discontinue an integration. We will notify you as promptly as
               possible in such events.
             </p>
@@ -404,7 +396,7 @@ export function TermsConditionsPage(): ReactElement {
             </p>
             <p className="mt-3">
               Responza is not liable for the actions, policies, or downtime of third-party
-              platforms including Meta (WhatsApp/Instagram), IndiaMart, or TikTok.
+              platforms including Meta (WhatsApp/Instagram) and IndiaMart.
             </p>
           </div>
 

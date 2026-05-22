@@ -2,7 +2,7 @@ import type { ReactElement } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { submitWaitlistEmail } from '@/lib/waitlistSubmit'
-import { Container, Btn, Wordmark } from '@/components/landing/primitives'
+import { Container, Btn } from '@/components/landing/primitives'
 
 export function LandingFooterCTA(): ReactElement {
   const [email, setEmail] = useState('')
@@ -62,7 +62,9 @@ export function LandingFooterCTA(): ReactElement {
         {/* minimal footer */}
         <div className="landing-footer-cta-bottom">
           <div className="landing-footer-cta-brand">
-            <Wordmark size={16} color="#fff" />
+            <span className="display landing-wordmark landing-wordmark-sm landing-wordmark-light">
+              RESPONZA
+            </span>
             <span className="landing-footer-cta-copyright">© 2026</span>
           </div>
           <div className="landing-footer-cta-links">
