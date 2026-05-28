@@ -68,6 +68,7 @@ export function LandingFooterCTA(): ReactElement {
             <span className="landing-footer-cta-copyright">© 2026</span>
           </div>
           <div className="landing-footer-cta-links">
+            <Link to="/blogs" className="landing-footer-cta-link">Blogs</Link>
             <Link to="/privacy-policy" className="landing-footer-cta-link">Privacy</Link>
             <Link to="/terms-conditions" className="landing-footer-cta-link">Terms</Link>
           </div>

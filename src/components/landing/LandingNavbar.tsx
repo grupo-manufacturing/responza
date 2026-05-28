@@ -39,6 +39,9 @@ export function LandingNavbar(): ReactElement {
             <a className="landing-navbar-link" href="#channels">
               Features
             </a>
+            <a className="landing-navbar-link" href="/blogs">
+              Blogs
+            </a>
           </div>
         </div>
       </nav>
