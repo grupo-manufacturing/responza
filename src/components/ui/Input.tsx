@@ -1,7 +1,7 @@
 import type { InputHTMLAttributes, ReactElement } from 'react'
 import { forwardRef } from 'react'
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+export type InputProps = InputHTMLAttributes<HTMLInputElement>
 
 function joinClassNames(...values: Array<string | undefined>): string {
   return values.filter((value) => value !== undefined && value !== '').join(' ')

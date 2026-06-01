@@ -13,11 +13,7 @@ dist-ssr
 *.local
 .env
 
-server/
-DESIGN.md
-UI_REVAMP.md
-PHASES.md
-token.txt
+backend/
 
 # Editor directories and files
 .vscode/*

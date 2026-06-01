@@ -20,11 +20,5 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "vite.config.ts",
-    "waitlistVitePlugin.ts",
-    "lib/waitlistResendService.ts",
-    "lib/waitlist-middleware.ts",
-    "api/waitlist.ts"
-  ]
+  "include": ["vite.config.ts"]
 }

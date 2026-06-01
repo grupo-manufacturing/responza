@@ -1,19 +1,13 @@
 import type { ReactElement } from 'react'
 import { Link } from 'react-router-dom'
-import '@/landing.css'
 
-import { LandingFooterCTA } from '@/components/landing/LandingFooterCTA'
-import { LandingNavbar } from '@/components/landing/LandingNavbar'
+import { LandingPageLayout } from '@/components/landing/LandingPageLayout'
 
 export function TermsConditionsPage(): ReactElement {
   return (
-    <main className="landing-page relative min-h-dvh bg-surface-base text-text-primary">
-      <section className="mx-auto w-full max-w-6xl px-6 py-6 md:px-10 md:py-8">
-        <LandingNavbar />
-      </section>
-
-      <section className="px-6 py-10 md:px-10 md:py-12">
-        <div className="mx-auto w-full max-w-4xl">
+    <LandingPageLayout>
+      <section className="landing-subpage-section">
+        <div className="landing-container landing-subpage-prose">
           <Link to="/" className="text-sm text-link-secondary hover:underline">
             Back to home
           </Link>
@@ -544,8 +538,6 @@ export function TermsConditionsPage(): ReactElement {
           </section>
         </div>
       </section>
-
-      <LandingFooterCTA />
-    </main>
+    </LandingPageLayout>
   )
 }

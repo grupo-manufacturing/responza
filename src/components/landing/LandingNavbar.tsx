@@ -30,13 +30,13 @@ export function LandingNavbar(): ReactElement {
           </button>
 
           <div className={`landing-navbar-links ${mobileOpen ? 'landing-navbar-links-open' : ''}`} aria-label="Landing navigation">
-            <a className="landing-navbar-link" href="#integrations">
+            <a className="landing-navbar-link" href="/#integrations">
               Integrations
             </a>
-            <a className="landing-navbar-link" href="#translations">
+            <a className="landing-navbar-link" href="/#translations">
               Translations
             </a>
-            <a className="landing-navbar-link" href="#channels">
+            <a className="landing-navbar-link" href="/#channels">
               Features
             </a>
             <a className="landing-navbar-link" href="/blogs">

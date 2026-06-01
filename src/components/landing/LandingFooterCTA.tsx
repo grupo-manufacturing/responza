@@ -25,8 +25,11 @@ export function LandingFooterCTA(): ReactElement {
             if (sending || sent) return
             setError(null)
             setSending(true)
+            const website =
+              (e.currentTarget.elements.namedItem('website') as HTMLInputElement | null)?.value ??
+              ''
             try {
-              await submitWaitlistEmail(email, 'footer')
+              await submitWaitlistEmail(email, 'footer', website)
               setSent(true)
             } catch (err) {
               setError(err instanceof Error ? err.message : 'Something went wrong.')
@@ -36,6 +39,14 @@ export function LandingFooterCTA(): ReactElement {
           }}
           className="landing-footer-cta-form"
         >
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden
+            className="absolute h-0 w-0 overflow-hidden opacity-0"
+          />
           <input
             required type="email" placeholder="you@yourstore.in" value={email}
             onChange={(e) => setEmail(e.target.value)}

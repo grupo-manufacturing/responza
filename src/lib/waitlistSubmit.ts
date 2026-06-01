@@ -1,13 +1,16 @@
+import { getApiBase } from './api'
+
 export type WaitlistSource = 'hero' | 'footer'
 
 export async function submitWaitlistEmail(
   email: string,
   source: WaitlistSource,
+  website = '',
 ): Promise<void> {
-  const res = await fetch('/api/waitlist', {
+  const res = await fetch(`${getApiBase()}/api/v1/waitlist`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, source }),
+    body: JSON.stringify({ email, source, website }),
   })
 
   const data: unknown = await res.json().catch(() => ({}))

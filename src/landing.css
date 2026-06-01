@@ -85,6 +85,20 @@
   padding: 0 28px;
 }
 
+.landing-subpage-section {
+  padding: 32px 0 40px;
+}
+
+@media (min-width: 768px) {
+  .landing-subpage-section {
+    padding: 40px 0 48px;
+  }
+}
+
+.landing-subpage-prose {
+  max-width: 56rem;
+}
+
 .landing-accent-em {
   font-style: normal;
   color: var(--accent);
